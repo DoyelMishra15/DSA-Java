@@ -47,5 +47,10 @@ public class Code {
             System.out.print(ch + " ");
         }
         System.out.println();
+
+        for (char ch = 'Z'; ch >= 'A'; ch--) {
+            System.out.print(ch + " ");
+        }
+        System.out.println();
     }
 }
