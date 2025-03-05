@@ -3,12 +3,14 @@ package rangeBased_prog;
 public class lastdigit1 {
     public static void main(String[] args) {
         int n = 321875;
-        
-        // Smallest digit in the given number
+        int num, d;
+
+        // Finding the smallest digit
         System.out.println("Program to find the smallest digit in the given number:");
-        int num = n, minDigit = 9;
+        num = n;
+        int minDigit = 9;
         while (num > 0) {
-            int d = num % 10;
+            d = num % 10;
             if (d < minDigit) {
                 minDigit = d;
             }
@@ -16,7 +18,7 @@ public class lastdigit1 {
         }
         System.out.println("Smallest digit: " + minDigit);
 
-        // Check if the number contains zero
+        // Checking if the number contains zero
         System.out.println("Program to check if the number contains zero:");
         num = n;
         boolean containsZero = false;
@@ -46,7 +48,7 @@ public class lastdigit1 {
         num = n;
         int largest = -1, secondLargest = -1;
         while (num > 0) {
-            int d = num % 10;
+            d = num % 10;
             if (d > largest) {
                 secondLargest = largest;
                 largest = d;
@@ -62,7 +64,7 @@ public class lastdigit1 {
         num = n;
         int smallest = 9, secondSmallest = 9;
         while (num > 0) {
-            int d = num % 10;
+            d = num % 10;
             if (d < smallest) {
                 secondSmallest = smallest;
                 smallest = d;
@@ -80,5 +82,68 @@ public class lastdigit1 {
             num /= 10;
         }
         System.out.println("First digit: " + num);
+
+        // Finding the sum of first and last digits
+        System.out.println("Program to find the sum of first and last digits in the given number:");
+        int firstDigit = num;
+        int lastDigit = n % 10;
+        System.out.println("Sum of first and last digits: " + (firstDigit + lastDigit));
+
+        // Multiplication table for each digit
+        System.out.println("Program to display multiplication table for each digit in the given number:");
+        num = n;
+        while (num > 0) {
+            d = num % 10;
+            System.out.println("Multiplication table for " + d + ":");
+            for (int i = 1; i <= 10; i++) {
+                System.out.println(d + " * " + i + " = " + (d * i));
+            }
+            num /= 10;
+        }
+
+        // Finding factorial of each digit
+        System.out.println("Program to find factorial value for each digit in the given number:");
+        num = n;
+        while (num > 0) {
+            d = num % 10;
+            int fact = 1;
+            for (int i = 1; i <= d; i++) {
+                fact *= i;
+            }
+            System.out.println("Factorial of " + d + " is " + fact);
+            num /= 10;
+        }
+
+        // Displaying square and cube values for each digit
+        System.out.println("Program to display square and cube values for each digit in the given number:");
+        num = n;
+        while (num > 0) {
+            d = num % 10;
+            System.out.println("Digit: " + d + " | Square: " + (d * d) + " | Cube: " + (d * d * d));
+            num /= 10;
+        }
+
+        // Displaying only prime digits
+        System.out.println("Program to display only prime digits in the given number:");
+        num = n;
+        System.out.print("Prime digits: ");
+        while (num > 0) {
+            d = num % 10;
+            if (d == 2 || d == 3 || d == 5 || d == 7) {
+                System.out.print(d + " ");
+            }
+            num /= 10;
+        }
+        System.out.println();
+
+        // Reversing the number
+        System.out.println("Program to reverse the given number:");
+        num = n;
+        int reversed = 0;
+        while (num > 0) {
+            reversed = reversed * 10 + num % 10;
+            num /= 10;
+        }
+        System.out.println("Reversed number: " + reversed);
     }
 }
