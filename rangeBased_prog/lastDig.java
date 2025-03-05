@@ -38,5 +38,18 @@ public class lastDig {
         } else {
             System.out.println("Odd number");
         }
+
+        // Displaying only even digits from the number
+        System.out.println("Program to display only even digits in the given number:");
+        num = n;
+        System.out.print("Even digits: ");
+        while (num > 0) {
+            d = num % 10;
+            if (d % 2 == 0) {
+                System.out.print(d + " ");
+            }
+            num /= 10;
+        }
+        System.out.println(); // To move to a new line after printing even digits
     }
 }
