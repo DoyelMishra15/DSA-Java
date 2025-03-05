@@ -51,5 +51,44 @@ public class lastDig {
             num /= 10;
         }
         System.out.println(); // To move to a new line after printing even digits
+
+        // Finding the sum of even digits
+        System.out.println("Program to find the sum of even digits in the given number:");
+        num = n;
+        int sumEven = 0;
+        while (num > 0) {
+            d = num % 10;
+            if (d % 2 == 0) {
+                sumEven += d;
+            }
+            num /= 10;
+        }
+        System.out.println("Sum of even digits: " + sumEven);
+
+        // Counting even digits in the number
+        System.out.println("Program to count even digits in the given number:");
+        num = n;
+        int evenCount = 0;
+        while (num > 0) {
+            d = num % 10;
+            if (d % 2 == 0) {
+                evenCount++;
+            }
+            num /= 10;
+        }
+        System.out.println("Even digit count: " + evenCount);
+
+        // Finding the largest digit in the number
+        System.out.println("Program to find the largest digit in the given number:");
+        num = n;
+        int maxDigit = 0;
+        while (num > 0) {
+            d = num % 10;
+            if (d > maxDigit) {
+                maxDigit = d;
+            }
+            num /= 10;
+        }
+        System.out.println("Largest digit: " + maxDigit);
     }
 }
