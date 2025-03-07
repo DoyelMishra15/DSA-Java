@@ -104,5 +104,24 @@ public class Pattern1 {
             }
             System.out.println();
         }
+        System.out.println();
+
+        System.out.println("Pattern 10:");
+        for (char x = 'E'; x >= 'A'; x--) {
+            for (char y = 'E'; y >= 'A'; y--) {
+                System.out.print(x);
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        System.out.println("Pattern 11:");
+        for (char x = 'E'; x >= 'A'; x--) {
+            for (char y = 'E'; y >= 'A'; y--) {
+                System.out.print(y);
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 }
