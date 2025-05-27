@@ -16,7 +16,7 @@ public class SortedOrNot {
         return increase||decrease;
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,8,4,5};
+        int[] arr = {1,2,3,4,5};
         boolean result= sorted(arr);
         System.out.println(result);
     }
